@@ -5,5 +5,5 @@ use shortscale::shortscale;
 
 #[wasm_bindgen]
 pub fn numwords(num: u64) -> String {
-    shortscale(num)
+    return shortscale(num);
 }

@@ -2,9 +2,14 @@ addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
 
+// Return JSON using query param n.
 async function handleRequest(request) {
+
+  // pick up #[wasm_bindgen] exports from ../src/lib.rs
   const { numwords } = wasm_bindgen;
-  await wasm_bindgen(WASM_WORKER_BINDING);
+
+  // `wasm` binding name is auto-generates by wrangler
+  await wasm_bindgen(wasm);
 
   let hello = 'from wasm-worker';
   let url = new URL(request.url);
@@ -12,11 +17,10 @@ async function handleRequest(request) {
   let words;
 
   try {
-    let num = BigInt(n);
-    words = numwords(num);
+    words = numwords(BigInt(n));
   }
   catch (e) {
-    words = 'undefined'
+    words = 'undefined';
   }
 
   return new Response(JSON.stringify({ hello, n, words }),
