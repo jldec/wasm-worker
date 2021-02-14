@@ -1,0 +1,6 @@
+name = "wasm-worker"
+type = "rust"
+account_id = "a0b19134b3f8f7aaae377202538aafe3"
+workers_dev = true
+route = "jldec.net/wasm-worker*"
+zone_id = "c600a62adedb1b6485e22b8d4ff7316d"

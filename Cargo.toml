@@ -1,0 +1,15 @@
+[package]
+name = "wasm-worker"
+version = "0.1.0"
+authors = ["Jurgen Leschner <jldec@ciaosoft.com>"]
+edition = "2018"
+license = "MIT"
+description = "Demo Cloudflare worker calling wasm library."
+repository = "https://github.com/jldec/wasm-worker"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = "0.2.70"
+shortscale = "1.4.0"
