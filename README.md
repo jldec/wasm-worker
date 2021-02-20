@@ -10,7 +10,7 @@ Demo project to accompany the blogpost [Calling Rust from a Cloudflare Worker](h
 
 ### Configure and build
 
-[Login](https://developers.cloudflare.com/workers/cli-wrangler/commands#login) to your Cloudflare account, and edit [wrangler.toml](wrangler.toml). The `zone_id` and `route` are only needed if you want to deploy on your own domain.
+[Login](https://developers.cloudflare.com/workers/cli-wrangler/commands#login) to your Cloudflare account, and edit [wrangler.toml](wrangler.toml) to set your own `account_id`. Values for `zone_id` and `route` are only needed if you want to deploy on your own domain.
 
 Build and run locally
 ```sh
